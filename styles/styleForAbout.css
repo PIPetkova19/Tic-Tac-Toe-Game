@@ -1,0 +1,45 @@
+body{
+    background-image: linear-gradient(90deg, rgba(247,245,255,1) 0%, rgba(200,210,255,1) 50%, rgba(130,151,207,1) 100%);
+}
+.navbar{
+  background-color: DarkGray;
+  text-align: center;
+  padding:10px;
+}
+.navbar a{
+    padding:120px;
+    text-decoration:none;
+    font-size: 20px;
+ }
+ a:link {
+    color: DarkBlue;
+}
+a:visited {
+    color: green;
+}
+ a:hover {
+     color: red;
+ }
+   h1{
+        color:DarkBlue;
+        text-align:center;
+        margin:50px;
+   }
+.pLeft{
+  text-align:left;
+   font-size:20px;
+ }
+.leftPics{
+    margin:30px;
+    float: left;
+width:200px;
+}
+.pRight{
+    text-align:right;
+     font-size:20px;
+   }
+  .rightPics{
+      margin:30px;
+      float: right;
+  width:200px;
+  }
