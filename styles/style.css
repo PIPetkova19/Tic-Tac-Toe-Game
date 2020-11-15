@@ -1,63 +1,80 @@
 body{
   background-image: linear-gradient(90deg, rgba(247,245,255,1) 0%, rgba(200,210,255,1) 50%, rgba(130,151,207,1) 100%);
-
 }
+
 .navbar{
-  background-color: DarkGray;
+background-color: DarkGray;
  text-align: center;
  padding:10px;
 }
+
 .navbar a{
  padding:120px;
 text-decoration:none;
 font-size: 20px;
+font-family: 'Lato', sans-serif;
 }
+
 .TicTacToeGame{
 color:DarkBlue;
 text-align:center;
+font-family: 'Lato', sans-serif;
 }
+
 .backgroundPic{
     display: block;
     margin-left: auto;
     margin-right: auto; 
      width: 100%;
 }
+
 a {
     text-decoration: none;
+    font-family: 'Lato', sans-serif;
   }
+
 a:link {
     color: DarkBlue;
-  }
+    
+}
+
 a:visited {
     color: green;
-  }
+}
+
 a:hover {
     color: red;
-  }
+}
 
 h1{
     color:DarkBlue;
     margin:20px;
-}
-  p{
-    margin:20px;
-
-  font-size:20px;
+    font-family: 'Lato', sans-serif;
   }
-  .tips{
+
+p{
+  margin:20px;
+  font-family: 'Lato', sans-serif;
+  font-size:20px;
+}
+
+.tips{
     margin:20px;
   text-align:right;
-  }
+  font-family: 'Lato', sans-serif;
+}
+
 .links1{
   display: block;
   text-align: left;
   margin:20px;
-
+  font-family: 'Lato', sans-serif;
 }
- .link2{
+
+.link2{
     display: block;
    text-align: right;
    margin:20px;
-
- }
+   font-family: 'Lato', sans-serif;
+  }
  

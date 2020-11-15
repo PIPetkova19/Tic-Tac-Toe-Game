@@ -1,47 +1,60 @@
 body{
     background-image: linear-gradient(90deg, rgba(247,245,255,1) 0%, rgba(200,210,255,1) 50%, rgba(130,151,207,1) 100%);
 }
+
 .navbar{
   background-color: DarkGray;
   text-align: center;
   padding:10px;
 }
+
 .navbar a{
     padding:120px;
     text-decoration:none;
     font-size: 20px;
+    font-family: 'Lato', sans-serif;
  }
+ 
  a:link {
     color: DarkBlue;
 }
+
 a:visited {
     color: green;
 }
+
  a:hover {
      color: red;
  }
+
 h1{
     color:DarkBlue;
     text-align:center;
      margin:50px;
+     font-family: 'Lato', sans-serif;
  }
+
 p{
     font-size:25px;
     text-align:center;
-
+    font-family: 'Lato', sans-serif;
 }
+
 .instagram{
     width:20%;
     margin:90px;
 }
+
 .facebook{
     width:15%;
     margin:90px;
 }
+
 .twitter{
     width:13%;
     margin:90px;
 }
+
 .email{
     width:10%;
     display: block;
