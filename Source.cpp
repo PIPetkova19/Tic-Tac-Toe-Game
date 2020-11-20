@@ -59,6 +59,7 @@ void GameBetween2Players() {
 				break;
 			}
 		}
+		
 		else {
 			cout << "Player 1, enters a number:";
 			cin >> Player1;
