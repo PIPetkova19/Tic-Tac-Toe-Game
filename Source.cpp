@@ -40,175 +40,291 @@ void GameBetween2Players() {
 	GameBoard(GameBoardPlaces);
 	int Player1, Player2;
 	int Counter = 0;
+	int winnerCounter = 0;
 	for (int i = 0; i < 100; i++) {
-		if (Counter == 3) {
-			if (((GameBoardPlaces[0] == GameBoardPlaces[1]) && (GameBoardPlaces[1] == GameBoardPlaces[2])) || ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8])) || ((GameBoardPlaces[0] == GameBoardPlaces[3]) && (GameBoardPlaces[3] == GameBoardPlaces[6])) ||
-				((GameBoardPlaces[1] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[7])) || ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8])) || ((GameBoardPlaces[2] == GameBoardPlaces[5]) && (GameBoardPlaces[5] == GameBoardPlaces[8])) ||
-				((GameBoardPlaces[6] == GameBoardPlaces[7]) && (GameBoardPlaces[7] == GameBoardPlaces[8])) || ((GameBoardPlaces[3] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[5])) || ((GameBoardPlaces[2] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[6]))) {
-				if (GameBoardPlaces[0] == 'X' || GameBoardPlaces[8] == 'X' || GameBoardPlaces[4] == 'X' || GameBoardPlaces[2] == 'X') {
-					cout << "Player 1 wins!!!" << endl;
+		if (((GameBoardPlaces[0] == GameBoardPlaces[1]) && (GameBoardPlaces[1] == GameBoardPlaces[2]) && GameBoardPlaces[0] == 'X') || ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8]) && GameBoardPlaces[0] == 'X') || ((GameBoardPlaces[0] == GameBoardPlaces[3]) && (GameBoardPlaces[3] == GameBoardPlaces[6]) && GameBoardPlaces[0] == 'X') ||
+			((GameBoardPlaces[1] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[7]) && GameBoardPlaces[1] == 'X') || ((GameBoardPlaces[2] == GameBoardPlaces[5]) && (GameBoardPlaces[5] == GameBoardPlaces[8]) && GameBoardPlaces[2] == 'X') ||
+			((GameBoardPlaces[6] == GameBoardPlaces[7]) && (GameBoardPlaces[7] == GameBoardPlaces[8]) && GameBoardPlaces[6] == 'X') || ((GameBoardPlaces[3] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[5]) && GameBoardPlaces[3] == 'X') || ((GameBoardPlaces[2] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[6]) && GameBoardPlaces[2] == 'X')) {
+			cout << "\n                       !!!  Player 1 wins  !!!" << endl;
+			winnerCounter = 1;
+			break;
+		}
+		else if (((GameBoardPlaces[0] == GameBoardPlaces[1]) && (GameBoardPlaces[1] == GameBoardPlaces[2]) && GameBoardPlaces[0] == 'O') || ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8]) && GameBoardPlaces[0] == 'O') || ((GameBoardPlaces[0] == GameBoardPlaces[3]) && (GameBoardPlaces[3] == GameBoardPlaces[6]) && GameBoardPlaces[0] == 'O') ||
+			((GameBoardPlaces[1] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[7]) && GameBoardPlaces[1] == 'O') || ((GameBoardPlaces[2] == GameBoardPlaces[5]) && (GameBoardPlaces[5] == GameBoardPlaces[8]) && GameBoardPlaces[2] == 'O') ||
+			((GameBoardPlaces[6] == GameBoardPlaces[7]) && (GameBoardPlaces[7] == GameBoardPlaces[8]) && GameBoardPlaces[6] == 'O') || ((GameBoardPlaces[3] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[5]) && GameBoardPlaces[3] == 'O') || ((GameBoardPlaces[2] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[6]) && GameBoardPlaces[2] == 'O')) {
+			cout << "\n                       !!!  Player 2 wins  !!!" << endl;
+			winnerCounter = 1;
+			break;
+		}
+		cout << "\n                     Player 1, enters a number : ";
+		cin >> Player1;
+		int CaseDefault1 = 0;
+		for (int k = 0; k < 100; k++) {
+			if (CaseDefault1 == 1) {
+				cout << endl;
+				cout << "\n                       !!!  Incorrect Input  !!!" << endl;
+				cout << "           Try again and enter a valid number from the board\n" << endl;
+				GameBoard(GameBoardPlaces);
+				cout << "                     Player 1, enters a number : ";
+				cin >> Player1;
+				CaseDefault1 = 0;
+			}
+			switch (Player1) {
+			case 1: {
+				if (GameBoardPlaces[0] == '1') {
+					GameBoardPlaces[0] = 'X';
+					GameBoard(GameBoardPlaces);
+					Counter++;
+				}
+				else {
+					CaseDefault1++;
 				}
 				break;
 			}
-			else if (((GameBoardPlaces[0] == GameBoardPlaces[1]) && (GameBoardPlaces[1] == GameBoardPlaces[2])) || ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8])) || ((GameBoardPlaces[0] == GameBoardPlaces[3]) && (GameBoardPlaces[3] == GameBoardPlaces[6])) ||
-				((GameBoardPlaces[1] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[7])) || ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8])) || ((GameBoardPlaces[2] == GameBoardPlaces[5]) && (GameBoardPlaces[5] == GameBoardPlaces[8])) ||
-				((GameBoardPlaces[6] == GameBoardPlaces[7]) && (GameBoardPlaces[7] == GameBoardPlaces[8])) || ((GameBoardPlaces[3] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[5])) || ((GameBoardPlaces[2] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[6]))) {
-				if (GameBoardPlaces[0] == 'O' || GameBoardPlaces[8] == 'O' || GameBoardPlaces[4] == 'O' || GameBoardPlaces[2] == 'O') {
-					cout << "Player 2 wins!!!" << endl;
+			case 2: {
+				if (GameBoardPlaces[1] == '2') {
+					GameBoardPlaces[1] = 'X';
+					GameBoard(GameBoardPlaces);
+					Counter++;
+				}
+				else {
+					CaseDefault1++;
+				}
+				break;
+			}
+			case 3: {
+				if (GameBoardPlaces[2] == '3') {
+					GameBoardPlaces[2] = 'X';
+					GameBoard(GameBoardPlaces);
+					Counter++;
+				}
+				else {
+					CaseDefault1++;
+				}
+				break;
+			}
+			case 4: {
+				if (GameBoardPlaces[3] == '4') {
+					GameBoardPlaces[3] = 'X';
+					GameBoard(GameBoardPlaces);
+					Counter++;
+				}
+				else {
+					CaseDefault1++;
+				}
+				break;
+			}
+			case 5: {
+				if (GameBoardPlaces[4] == '5') {
+					GameBoardPlaces[4] = 'X';
+					GameBoard(GameBoardPlaces);
+					Counter++;
+				}
+				else {
+					CaseDefault1++;
+				}
+				break;
+			}
+			case 6: {
+				if (GameBoardPlaces[5] == '6') {
+					GameBoardPlaces[5] = 'X';
+					GameBoard(GameBoardPlaces);
+					Counter++;
+				}
+				else {
+					CaseDefault1++;
+				}
+				break;
+			}
+			case 7: {
+				if (GameBoardPlaces[6] == '7') {
+					GameBoardPlaces[6] = 'X';
+					GameBoard(GameBoardPlaces);
+					Counter++;
+				}
+				else {
+					CaseDefault1++;
+				}
+				break;
+			}
+			case 8: {
+				if (GameBoardPlaces[7] == '8') {
+					GameBoardPlaces[7] = 'X';
+					GameBoard(GameBoardPlaces);
+					Counter++;
+				}
+				else {
+					CaseDefault1++;
+				}
+				break;
+			}
+			case 9: {
+				if (GameBoardPlaces[8] == '9') {
+					GameBoardPlaces[8] = 'X';
+					GameBoard(GameBoardPlaces);
+					Counter++;
+				}
+				else {
+					CaseDefault1++;
+				}
+				break;
+			}
+			default: {
+				CaseDefault1++;
+				break;
+			}
+			}
+			if (CaseDefault1 == 0) {
+				if (((GameBoardPlaces[0] == GameBoardPlaces[1]) && (GameBoardPlaces[1] == GameBoardPlaces[2]) && GameBoardPlaces[0] == 'X') || ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8]) && GameBoardPlaces[0] == 'X') || ((GameBoardPlaces[0] == GameBoardPlaces[3]) && (GameBoardPlaces[3] == GameBoardPlaces[6]) && GameBoardPlaces[0] == 'X') ||
+					((GameBoardPlaces[1] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[7]) && GameBoardPlaces[1] == 'X') || ((GameBoardPlaces[2] == GameBoardPlaces[5]) && (GameBoardPlaces[5] == GameBoardPlaces[8]) && GameBoardPlaces[2] == 'X') ||
+					((GameBoardPlaces[6] == GameBoardPlaces[7]) && (GameBoardPlaces[7] == GameBoardPlaces[8]) && GameBoardPlaces[6] == 'X') || ((GameBoardPlaces[3] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[5]) && GameBoardPlaces[3] == 'X') || ((GameBoardPlaces[2] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[6]) && GameBoardPlaces[2] == 'X')) {
+					cout << "\n                       !!!  Player 1 wins  !!!" << endl;
+					winnerCounter = 1;
 				}
 				break;
 			}
 		}
-		
-		else {
-			cout << "Player 1, enters a number:";
-			cin >> Player1;
-			int CaseDefault1 = 0;
-			for (int k = 0; k < 100; k++) {
-				if (CaseDefault1 == 1) {
-					cout << "Incorrect Input!" << endl;
-					cout << "Try again and enter a valid number from the board.\n" << endl;
-					cin >> Player1;
-					CaseDefault1 = 0;
-				}
-				switch (Player1) {
-				case 1: {
-					GameBoardPlaces[0] = 'X';
-					GameBoard(GameBoardPlaces);
-					break;
-				}
-				case 2: {
-					GameBoardPlaces[1] = 'X';
-					GameBoard(GameBoardPlaces);
-					break;
-				}
-				case 3: {
-					GameBoardPlaces[2] = 'X';
-					GameBoard(GameBoardPlaces);
-					break;
-				}
-				case 4: {
-					GameBoardPlaces[3] = 'X';
-					GameBoard(GameBoardPlaces);
-					break;
-				}
-				case 5: {
-					GameBoardPlaces[4] = 'X';
-					GameBoard(GameBoardPlaces);
-					break;
-				}
-				case 6: {
-					GameBoardPlaces[5] = 'X';
-					GameBoard(GameBoardPlaces);
-					break;
-				}
-				case 7: {
-					GameBoardPlaces[6] = 'X';
-					GameBoard(GameBoardPlaces);
-					break;
-				}
-				case 8: {
-					GameBoardPlaces[7] = 'X';
-					GameBoard(GameBoardPlaces);
-					break;
-				}
-				case 9: {
-					GameBoardPlaces[8] = 'X';
-					GameBoard(GameBoardPlaces);
-					break;
-				}
-
-				}
-				if (CaseDefault1 == 0) {
-					if (((GameBoardPlaces[0] == GameBoardPlaces[1]) && (GameBoardPlaces[1] == GameBoardPlaces[2])) || ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8])) || ((GameBoardPlaces[0] == GameBoardPlaces[3]) && (GameBoardPlaces[3] == GameBoardPlaces[6])) ||
-						((GameBoardPlaces[1] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[7])) || ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8])) || ((GameBoardPlaces[2] == GameBoardPlaces[5]) && (GameBoardPlaces[5] == GameBoardPlaces[8])) ||
-						((GameBoardPlaces[6] == GameBoardPlaces[7]) && (GameBoardPlaces[7] == GameBoardPlaces[8])) || ((GameBoardPlaces[3] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[5])) || ((GameBoardPlaces[2] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[6]))) {
-						if (GameBoardPlaces[0] == 'X' || GameBoardPlaces[8] == 'X' || GameBoardPlaces[4] == 'X' || GameBoardPlaces[2] == 'X') {
-							cout << "Player 1 wins!!!" << endl;
-						}
-					}
-					break;
-				}
+		if (winnerCounter == 1) {
+			break;
+		}
+		if (Counter == 9) {
+			cout << "\n                          !!!  Game Draw  !!!" << endl;
+			break;
+		}
+		cout << "\n                     Player 2, enters a number : ";
+		cin >> Player2;
+		int CaseDefault2 = 0;
+		for (int j = 0; j < 100; j++) {
+			if (CaseDefault2 == 1) {
+				cout << endl;
+				cout << "\n                       !!!  Incorrect Input  !!!" << endl;
+				cout << "           Try again and enter a valid number from the board\n" << endl;
+				GameBoard(GameBoardPlaces);
+				cout << "                     Player 2, enters a number : ";
+				cin >> Player2;
+				CaseDefault2 = 0;
 			}
-			cout << "Player 2, enters a number:";
-			cin >> Player2;
-			int CaseDefault2 = 0;
-			for (int j = 0; j < 1; j++) {
-				if (CaseDefault2 == 1) {
-					cout << "Incorrect Input!" << endl;
-					cout << "Try again and enter a valid number from the board.\n" << endl;
-					cin >> Player2;
-					CaseDefault2 = 0;
-				}
-				switch (Player2) {
-				case 1: {
+			switch (Player2) {
+			case 1: {
+				if (GameBoardPlaces[0] == '1') {
 					GameBoardPlaces[0] = 'O';
 					GameBoard(GameBoardPlaces);
-					break;
+					Counter++;
 				}
-				case 2: {
+				else {
+					CaseDefault2++;
+				}
+				break;
+			}
+			case 2: {
+				if (GameBoardPlaces[1] == '2') {
 					GameBoardPlaces[1] = 'O';
 					GameBoard(GameBoardPlaces);
-					break;
+					Counter++;
 				}
-				case 3: {
+				else {
+					CaseDefault2++;
+				}
+				break;
+			}
+			case 3: {
+				if (GameBoardPlaces[2] == '3') {
 					GameBoardPlaces[2] = 'O';
 					GameBoard(GameBoardPlaces);
-					break;
+					Counter++;
 				}
-				case 4: {
+				else {
+					CaseDefault2++;
+				}
+				break;
+			}
+			case 4: {
+				if (GameBoardPlaces[3] == '4') {
 					GameBoardPlaces[3] = 'O';
 					GameBoard(GameBoardPlaces);
-					break;
+					Counter++;
 				}
-				case 5: {
+				else {
+					CaseDefault2++;
+				}
+				break;
+			}
+			case 5: {
+				if (GameBoardPlaces[4] == '5') {
 					GameBoardPlaces[4] = 'O';
 					GameBoard(GameBoardPlaces);
-					break;
+					Counter++;
 				}
-				case 6: {
+				else {
+					CaseDefault2++;
+				}
+				break;
+			}
+			case 6: {
+				if (GameBoardPlaces[5] == '6') {
 					GameBoardPlaces[5] = 'O';
 					GameBoard(GameBoardPlaces);
-					break;
+					Counter++;
 				}
-				case 7: {
+				else {
+					CaseDefault2++;
+				}
+				break;
+			}
+			case 7: {
+				if (GameBoardPlaces[6] == '7') {
 					GameBoardPlaces[6] = 'O';
 					GameBoard(GameBoardPlaces);
-					break;
+					Counter++;
 				}
-				case 8: {
+				else {
+					CaseDefault2++;
+				}
+				break;
+			}
+			case 8: {
+				if (GameBoardPlaces[7] == '8') {
 					GameBoardPlaces[7] = 'O';
 					GameBoard(GameBoardPlaces);
-					break;
+					Counter++;
 				}
-				case 9: {
+				else {
+					CaseDefault2++;
+				}
+				break;
+			}
+			case 9: {
+				if (GameBoardPlaces[8] == '9') {
 					GameBoardPlaces[8] = 'O';
 					GameBoard(GameBoardPlaces);
-					break;
+					Counter++;
 				}
-
-				default: {
+				else {
 					CaseDefault2++;
-					if (((((GameBoardPlaces[0] == 'O') == (GameBoardPlaces[1] == 'O')) && ((GameBoardPlaces[1] == 'O') == (GameBoardPlaces[2] == 'O'))) || (((GameBoardPlaces[0] == 'O') == (GameBoardPlaces[4] == 'O')) && (GameBoardPlaces[4] == 'O') == (GameBoardPlaces[8] == 'O')) || (((GameBoardPlaces[0] == 'O') == (GameBoardPlaces[3] == 'O')) && (GameBoardPlaces[3] == 'O') == (GameBoardPlaces[6] == 'O')) ||
-						(((GameBoardPlaces[1] == 'O') == (GameBoardPlaces[4] == 'O')) && ((GameBoardPlaces[4] == 'O') == (GameBoardPlaces[7] == 'O'))) || (((GameBoardPlaces[0] == 'O') == (GameBoardPlaces[4] == 'O')) && (GameBoardPlaces[4] == 'O') == (GameBoardPlaces[8] == 'O')) || (((GameBoardPlaces[2] == 'O') == (GameBoardPlaces[5] == 'O')) && (GameBoardPlaces[5] == 'O') == (GameBoardPlaces[8] == 'O')) ||
-						(((GameBoardPlaces[6] == 'O') == (GameBoardPlaces[7] == 'O')) && ((GameBoardPlaces[7] == 'O') == (GameBoardPlaces[8] == 'O'))) || (((GameBoardPlaces[3] == 'O') == (GameBoardPlaces[4] == 'O')) && (GameBoardPlaces[4] == 'O') == (GameBoardPlaces[5] == 'O')) || (((GameBoardPlaces[2] == 'O') == (GameBoardPlaces[4] == 'O')) && (GameBoardPlaces[4] == 'O') == (GameBoardPlaces[6] == 'O')))) {
-						cout << "Player 2 wins!!!" << endl;
-					}
-					break;
 				}
-					   if (CaseDefault2 == 0) {
-						   if (((GameBoardPlaces[0] == GameBoardPlaces[1]) && (GameBoardPlaces[1] == GameBoardPlaces[2])) || ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8])) || ((GameBoardPlaces[0] == GameBoardPlaces[3]) && (GameBoardPlaces[3] == GameBoardPlaces[6])) ||
-							   ((GameBoardPlaces[1] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[7])) || ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8])) || ((GameBoardPlaces[2] == GameBoardPlaces[5]) && (GameBoardPlaces[5] == GameBoardPlaces[8])) ||
-							   ((GameBoardPlaces[6] == GameBoardPlaces[7]) && (GameBoardPlaces[7] == GameBoardPlaces[8])) || ((GameBoardPlaces[3] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[5])) || ((GameBoardPlaces[2] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[6]))) {
-							   if (GameBoardPlaces[0] == 'O' || GameBoardPlaces[8] == 'O' || GameBoardPlaces[4] == 'O' || GameBoardPlaces[2] == 'O') {
-								   cout << "Player 2 wins!!!" << endl;
-							   }
-						   }
-						   break;
-					   }
-				}
+				break;
 			}
-			Counter++;
+			default: {
+				CaseDefault2++;
+				break;
+			}
+			}
+			if (CaseDefault2 == 0) {
+				if (((GameBoardPlaces[0] == GameBoardPlaces[1]) && (GameBoardPlaces[1] == GameBoardPlaces[2]) && GameBoardPlaces[0] == 'O') || ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8]) && GameBoardPlaces[0] == 'O') || ((GameBoardPlaces[0] == GameBoardPlaces[3]) && (GameBoardPlaces[3] == GameBoardPlaces[6]) && GameBoardPlaces[0] == 'O') ||
+					((GameBoardPlaces[1] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[7]) && GameBoardPlaces[1] == 'O') || ((GameBoardPlaces[2] == GameBoardPlaces[5]) && (GameBoardPlaces[5] == GameBoardPlaces[8]) && GameBoardPlaces[2] == 'O') ||
+					((GameBoardPlaces[6] == GameBoardPlaces[7]) && (GameBoardPlaces[7] == GameBoardPlaces[8]) && GameBoardPlaces[6] == 'O') || ((GameBoardPlaces[3] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[5]) && GameBoardPlaces[3] == 'O') || ((GameBoardPlaces[2] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[6]) && GameBoardPlaces[2] == 'O')) {
+					cout << "\n                       !!!  Player 2 wins  !!!" << endl;
+					winnerCounter = 1;
+				}
+				break;
+			}
+		}
+		if (winnerCounter == 1) {
+			break;
+		}
+		if (Counter == 9) {
+			cout << "\n                          !!!  Game Draw  !!!" << endl;
+			break;
 		}
 	}
 }
