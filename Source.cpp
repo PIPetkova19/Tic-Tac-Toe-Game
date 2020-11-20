@@ -349,6 +349,6 @@ int main()
 		GameBetween2Players();
 	}
 	else {
-		cout << "Incorrect input!";
+		cout << "                       !!! Incorrect Input !!!\n";
 	}
 }
