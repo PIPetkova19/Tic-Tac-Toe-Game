@@ -1,4 +1,4 @@
-# Please follow next seps on order to be able to run Tic-Tac-Toe-Game and have fun
+# Please follow next steps on order to be able to run Tic-Tac-Toe-Game and have fun
 
  
 
