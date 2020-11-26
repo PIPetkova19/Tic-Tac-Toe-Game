@@ -64,7 +64,7 @@
 
     .pics{
         float:left;
-        margin:150px;
+        margin:190px;
     }
 
     .social{
@@ -72,7 +72,7 @@
     }
 
     .email{
-        width:10%;
+        width:8%;
         display: block;
         margin-left: auto;
         margin-right: auto;
