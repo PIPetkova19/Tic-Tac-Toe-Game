@@ -33,9 +33,9 @@ Notepad++ - to create the HTML pages and CSS styles
 
 
 Authors:
-Petya Petkova - Creator of the HTML pages and CSS sheets
-Polya Dimitrova - C++ developer
-Karina Tangardzhieva - Scrum Trainer
-Lubomir Bozukov - Code Checker
+Petya Petkova - Creator of the HTML pages and CSS sheets <br>
+Polya Dimitrova - C++ developer <br>
+Karina Tangardzhieva - Scrum Trainer <br>
+Lubomir Bozukov - Code Checker <br>
 
 Burgas, 2020
