@@ -3,53 +3,52 @@ body{
 }
     
 ul{
-  list-style-type: none;
-  color:rgb(226,226,226);
-  letter-spacing: 5px;
-  font-size: 18px;
-  font-weight: bold;
-  }
-  
-  li{
-  float: right;
-  }
-  
-  li a{
-  display: block;
-  color: #d3dbe2;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-  }
-  
-  li a:hover{
-  background-color: #278888;
-  }
-  
-  nav
-  {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color:#77a8a8;
-  margin:10px;
-  }
-  
-  .navbar
-  {
-  color:#d3dbe2;
-  letter-spacing: 5px;
-  font-size: 20px;
-  }
-  
-  .nav-links a
-  {
-  color:#d3dbe2;
-  text-decoration: none;
-  letter-spacing: 3p
-  }
-
-.tips{
+    list-style-type: none;
+    color:rgb(226,226,226);
+    letter-spacing: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    }
+    
+    li{
+    float: right;
+    }
+    
+    li a{
+    display: block;
+    color: #d3dbe2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    }
+    
+    li a:hover{
+    background-color: #278888;
+    }
+    
+    nav
+    {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#77a8a8;
+    margin:10px;
+    }
+    
+    .navbar
+    {
+    color:#d3dbe2;
+    letter-spacing: 5px;
+    font-size: 20px;
+    }
+    
+    .nav-links a
+    {
+    color:#d3dbe2;
+    text-decoration: none;
+    letter-spacing: 3p
+    }
+ h1{
     color:#3b3a30;
     text-align:center;
     margin:50px;
@@ -63,4 +62,3 @@ p{
     font-family: 'Lato', sans-serif;
 
 }
-     
