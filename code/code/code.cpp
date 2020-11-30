@@ -328,27 +328,9 @@ void GameBetween2Players() {
 		}
 	}
 }
-void GameBetweenComputerAnd1Player() {
-	cout << "\n" << "                   Player 1 (X) ------- Computer (O)" << endl;
-	char GameBoardPlaces[9] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-	GameBoard(GameBoardPlaces);
-}
 int main()
 {
 	GameName();
-	int NumberChoice;
-	cout << "                Enter number '2' for game between 2 Players." << endl;
-	cout << "           Enter number '1' for game between 1 Player and Computer." << endl;
-	cout << "                            Enter number: ";
-	cin >> NumberChoice;
 	cout << endl;
-	if (NumberChoice == 1) {
-		GameBetweenComputerAnd1Player();
-	}
-	else if (NumberChoice == 2) {
-		GameBetween2Players();
-	}
-	else {
-		cout << "                       !!! Incorrect Input !!!\n";
-	}
+	GameBetween2Players();
 }
