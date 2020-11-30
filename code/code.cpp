@@ -17,6 +17,7 @@ void GameName() {
 	cout << "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " << endl;
 	cout << endl;
 }
+// this function displays the Tic Tac Toe on the screen, when you open the game
 char GameBoard(char GameBoardPlaces[]) {
 	cout << endl;
 	cout << "                     ----------------------------- " << endl;
@@ -34,6 +35,7 @@ char GameBoard(char GameBoardPlaces[]) {
 	cout << "                     -----------------------------" << endl;
 	return 1;
 }
+// this function places the board on the screen
 void GameBetween2Players() {
 	cout << "\n" << "                   Player 1 (X) ------- Player 2 (O)" << endl;
 	char GameBoardPlaces[9] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
@@ -49,6 +51,7 @@ void GameBetween2Players() {
 			winnerCounter = 1;
 			break;
 		}
+		// funtion if player 1 wins
 		else if (((GameBoardPlaces[0] == GameBoardPlaces[1]) && (GameBoardPlaces[1] == GameBoardPlaces[2]) && GameBoardPlaces[0] == 'O') || ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8]) && GameBoardPlaces[0] == 'O') || ((GameBoardPlaces[0] == GameBoardPlaces[3]) && (GameBoardPlaces[3] == GameBoardPlaces[6]) && GameBoardPlaces[0] == 'O') ||
 			((GameBoardPlaces[1] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[7]) && GameBoardPlaces[1] == 'O') || ((GameBoardPlaces[2] == GameBoardPlaces[5]) && (GameBoardPlaces[5] == GameBoardPlaces[8]) && GameBoardPlaces[2] == 'O') ||
 			((GameBoardPlaces[6] == GameBoardPlaces[7]) && (GameBoardPlaces[7] == GameBoardPlaces[8]) && GameBoardPlaces[6] == 'O') || ((GameBoardPlaces[3] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[5]) && GameBoardPlaces[3] == 'O') || ((GameBoardPlaces[2] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[6]) && GameBoardPlaces[2] == 'O')) {
@@ -56,6 +59,7 @@ void GameBetween2Players() {
 			winnerCounter = 1;
 			break;
 		}
+		// function if player 2 wins
 		cout << "\n                     Player 1, enters a number : ";
 		cin >> Player1;
 		int CaseDefault1 = 0;
@@ -69,6 +73,7 @@ void GameBetween2Players() {
 				cin >> Player1;
 				CaseDefault1 = 0;
 			}
+			// function for player 1 to enter number
 			switch (Player1) {
 			case 1: {
 				if (GameBoardPlaces[0] == '1') {
@@ -173,6 +178,7 @@ void GameBetween2Players() {
 				CaseDefault1++;
 				break;
 			}
+				   // function to place X to the board
 			}
 			if (CaseDefault1 == 0) {
 				if (((GameBoardPlaces[0] == GameBoardPlaces[1]) && (GameBoardPlaces[1] == GameBoardPlaces[2]) && GameBoardPlaces[0] == 'X') || ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8]) && GameBoardPlaces[0] == 'X') || ((GameBoardPlaces[0] == GameBoardPlaces[3]) && (GameBoardPlaces[3] == GameBoardPlaces[6]) && GameBoardPlaces[0] == 'X') ||
@@ -183,6 +189,7 @@ void GameBetween2Players() {
 				}
 				break;
 			}
+			// funtion if the player 1 wins
 		}
 		if (winnerCounter == 1) {
 			break;
@@ -191,6 +198,7 @@ void GameBetween2Players() {
 			cout << "\n                          !!!  Game Draw  !!!" << endl;
 			break;
 		}
+		// function if the game is draw
 		cout << "\n                     Player 2, enters a number : ";
 		cin >> Player2;
 		int CaseDefault2 = 0;
@@ -204,6 +212,7 @@ void GameBetween2Players() {
 				cin >> Player2;
 				CaseDefault2 = 0;
 			}
+			// function for player 2 to enter a number
 			switch (Player2) {
 			case 1: {
 				if (GameBoardPlaces[0] == '1') {
@@ -308,6 +317,7 @@ void GameBetween2Players() {
 				CaseDefault2++;
 				break;
 			}
+				   // function for player 2 to place O
 			}
 			if (CaseDefault2 == 0) {
 				if (((GameBoardPlaces[0] == GameBoardPlaces[1]) && (GameBoardPlaces[1] == GameBoardPlaces[2]) && GameBoardPlaces[0] == 'O') || ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8]) && GameBoardPlaces[0] == 'O') || ((GameBoardPlaces[0] == GameBoardPlaces[3]) && (GameBoardPlaces[3] == GameBoardPlaces[6]) && GameBoardPlaces[0] == 'O') ||
@@ -318,6 +328,7 @@ void GameBetween2Players() {
 				}
 				break;
 			}
+			// if the player 2 wins it will show this function
 		}
 		if (winnerCounter == 1) {
 			break;
@@ -326,13 +337,16 @@ void GameBetween2Players() {
 			cout << "\n                          !!!  Game Draw  !!!" << endl;
 			break;
 		}
+		// if the game is draw it will show this function
 	}
 }
+// this function is for the type of game between 2 player
 void GameBetweenComputerAnd1Player() {
 	cout << "\n" << "                   Player 1 (X) ------- Computer (O)" << endl;
 	char GameBoardPlaces[9] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 	GameBoard(GameBoardPlaces);
 }
+// this function is for game between 1 player and computer
 int main()
 {
 	GameName();
@@ -345,9 +359,11 @@ int main()
 	if (NumberChoice == 1) {
 		GameBetweenComputerAnd1Player();
 	}
+	// this is when the player wants to play with AI
 	else if (NumberChoice == 2) {
 		GameBetween2Players();
 	}
+	// this is when 2 players want to play one versus other from one computer
 	else {
 		cout << "                       !!! Incorrect Input !!!\n";
 	}
