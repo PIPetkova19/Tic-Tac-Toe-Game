@@ -65,7 +65,8 @@ ul{
   letter-spacing: 3p
   }
 
-a {
+a 
+{
     text-decoration: none;
   }
 
@@ -108,15 +109,16 @@ p{
 
  .pic1{
   float:left;
-  margin:20px;
-}
-.pic2{
-  float:right;
-  margin:20px;
-  width:15%;
-}
-.pic3{
-  float:left;
-  margin:20px;
-  width:20%;
-}
+  margin:40px;
+	}
+
+	.pic2{
+	  float:right;
+	  margin:10px;
+	  width:15%;
+	}
+	.pic3{
+	  float:left;
+	  margin:20px;
+	  width:20%;
+	}

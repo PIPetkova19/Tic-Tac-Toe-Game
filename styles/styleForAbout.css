@@ -48,36 +48,78 @@
     text-decoration: none;
     letter-spacing: 3p
     }
-h1{
-    color:#3b3a30;
-    text-align:center;
-    margin:50px;
-    font-family: 'Lato', sans-serif;
-}
+	h1{
+		color:#3b3a30;
+		text-align:center;
+		margin:50px;
+		font-family: 'Lato', sans-serif;
+	}
 
-.pLeft{
-  text-align:left;
-   font-size:20px;
-   margin:30px;
-   font-family: 'Lato', sans-serif;
+	.pLeft{
+	   font-size:20px;
+	   font-family: 'Lato', sans-serif;
+		margin-top:80px;
+	 }
 
- }
+	.leftPics{
+		margin:30px;
+		float: left;
+	width:10%;
+	}
 
-.leftPics{
-    margin:30px;
-    float: left;
-width:200px;
-}
+	.pRight{
+		text-align:right;
+		font-size:20px;
+		margin:30px;
+		font-family: 'Lato', sans-serif;
+				margin-top:60px;
 
-.pRight{
-    text-align:right;
-    font-size:20px;
-    margin:30px;
-    font-family: 'Lato', sans-serif;
-}
+	}
 
-.rightPics{
-    margin:30px;
-    float: right;
-    width:200px;
-}
+	.rightPics{
+		margin:30px;
+		float: right;
+		width:10%;
+	}
+
+	.buttonRight {
+		float:right;
+		display:inline-block;
+		padding:0.35em 1.2em;
+		border:0.1em solid #FFFFFF;
+		margin:0 0.3em 0.3em 0;
+		border-radius:0.12em;
+		box-sizing: border-box;
+		text-decoration:none;
+		font-family: 'Lato', sans-serif;
+		font-weight:300;
+		color:#FFFFFF;
+		text-align:center;
+		transition: all 0.2s;
+	}
+	
+	.buttonRight:hover{
+		color:#000000;
+	background-color:#FFFFFF;
+	}
+	
+	.buttonLeft {
+		float:left;
+	    display:inline-block;
+		padding:0.35em 1.2em;
+		border:0.1em solid #FFFFFF;
+		margin:0 0.3em 0.3em 0;
+		border-radius:0.12em;
+		box-sizing: border-box;
+		text-decoration:none;
+		font-family: 'Lato', sans-serif;
+		font-weight:300;
+		color:#FFFFFF;
+		text-align:center;
+		transition: all 0.2s;
+	}
+	
+	.buttonLeft:hover{
+	color:#000000;
+	background-color:#FFFFFF;
+	}
