@@ -18,7 +18,9 @@ void GameName() {
 	cout << "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " << endl;
 	cout << endl;
 }
+
 // this function places the name of the game
+
 char GameBoard(char GameBoardPlaces[]) {
 	cout << endl;
 	cout << "                     ----------------------------- " << endl;
@@ -37,13 +39,17 @@ char GameBoard(char GameBoardPlaces[]) {
 	return 1;
 }
 // this function places the game board
-void GameBetween2Players() {
+
+void GameBetween2Players() 
+
+{
 	cout << "\n" << "                   Player 1 (X) ------- Player 2 (O)" << endl;
 	char GameBoardPlaces[9] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 	GameBoard(GameBoardPlaces);
 	int Player1, Player2;
 	int Counter = 0;
 	int winnerCounter = 0;
+	
 	for (int i = 0; i < 100; i++) {
 		if (((GameBoardPlaces[0] == GameBoardPlaces[1]) && (GameBoardPlaces[1] == GameBoardPlaces[2]) && GameBoardPlaces[0] == 'X')
 			|| ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8]) && GameBoardPlaces[0] == 'X') 
