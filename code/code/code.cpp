@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 void GameName() {
 	cout << "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " << endl;
 	cout << endl;
