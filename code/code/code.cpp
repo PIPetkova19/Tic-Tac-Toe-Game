@@ -499,4 +499,5 @@ int main()
 	GameName();
 	cout << endl;
 	GameBetween2Players();
+	system("PAUSE");
 }
