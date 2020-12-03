@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-//// this function places the name of the game ////
+// this function places the name of the game
 
 void GameName()
 {
@@ -24,7 +24,7 @@ void GameName()
 
 }
 
-//// this function places the game board ////
+// this function places the game board
 
 char GameBoard(char GameBoardPlaces[])
 {
@@ -47,7 +47,7 @@ char GameBoard(char GameBoardPlaces[])
 
 }
 
-//// this function represents the main code for the game ////
+// this function represents the main code for the game
 
 void GameBetween2Players()
 
@@ -60,11 +60,11 @@ void GameBetween2Players()
 	int Counter = 0;
 	int winnerCounter = 0;
 
-	//// this cycle represents the players moves ////
+	// this cycle represents the players moves
 
 	for (int i = 0; i < 100; i++) {
 
-		//// this 'if' checks if there is a winner ////
+		// this 'if' checks if there is a winner
 
 		if (((GameBoardPlaces[0] == GameBoardPlaces[1]) && (GameBoardPlaces[1] == GameBoardPlaces[2]) && GameBoardPlaces[0] == 'X')
 			|| ((GameBoardPlaces[0] == GameBoardPlaces[4]) && (GameBoardPlaces[4] == GameBoardPlaces[8]) && GameBoardPlaces[0] == 'X')
@@ -99,11 +99,11 @@ void GameBetween2Players()
 		cin >> Player1;
 		int CaseDefault1 = 0;
 
-		//// this is the main cycle for the player1's moves ////
+		// this is the main cycle for the player1's moves
 
 		for (int k = 0; k < 100; k++) {
 
-			//// this 'if' checks if the input is incorrect ////
+			// this 'if' checks if the input is incorrect
 
 			if (CaseDefault1 == 1) {
 				cout << endl;
@@ -115,7 +115,7 @@ void GameBetween2Players()
 				CaseDefault1 = 0;
 			}
 
-			//// this 'switch' enters the player1's moves ////
+			// this 'switch' enters the player1's moves
 
 			switch (Player1) {
 
@@ -253,7 +253,7 @@ void GameBetween2Players()
 
 			}
 
-			//// this 'if' checks if player1 wins ////
+			// this 'if' checks if player1 wins
 
 			if (CaseDefault1 == 0) {
 				if (((GameBoardPlaces[0] == GameBoardPlaces[1]) && (GameBoardPlaces[1] == GameBoardPlaces[2]) && GameBoardPlaces[0] == 'X')
@@ -273,14 +273,14 @@ void GameBetween2Players()
 
 		}
 
-		//// this 'if' closes the program when the player 1 wins just in case the program hasn't closed yet ////
+		// this 'if' closes the program when the player 1 wins just in case the program hasn't closed yet
 
 		if (winnerCounter == 1)
 		{
 			break;
 		}
 
-		//// this 'if' checks if the game is draw and there are no winners ////
+		// this 'if' checks if the game is draw and there are no winners
 
 		if (Counter == 9)
 		{
@@ -292,11 +292,11 @@ void GameBetween2Players()
 		cin >> Player2;
 		int CaseDefault2 = 0;
 
-		//// this is the main cycle for the player2's moves ////
+		// this is the main cycle for the player2's moves
 
 		for (int j = 0; j < 100; j++) {
 
-			//// this 'if' checks if the input is incorrect ////
+			// this 'if' checks if the input is incorrect
 
 			if (CaseDefault2 == 1)
 			{
@@ -309,7 +309,7 @@ void GameBetween2Players()
 				CaseDefault2 = 0;
 			}
 
-			//// this 'switch' enters the player2's moves ////
+			// this 'switch' enters the player2's moves
 
 			switch (Player2) {
 
@@ -454,7 +454,7 @@ void GameBetween2Players()
 
 			}
 
-			//// this 'if' checks if player2 wins ////
+			// this 'if' checks if player2 wins
 
 			if (CaseDefault2 == 0) {
 				if (((GameBoardPlaces[0] == GameBoardPlaces[1]) && (GameBoardPlaces[1] == GameBoardPlaces[2]) && GameBoardPlaces[0] == 'O')
@@ -474,14 +474,14 @@ void GameBetween2Players()
 
 		}
 
-		//// this 'if' closes the program when the player 1 wins just in case the program hasn't closed yet ////
+		// this 'if' closes the program when the player 1 wins just in case the program hasn't closed yet
 
 		if (winnerCounter == 1)
 		{
 			break;
 		}
 
-		//// this 'if' checks if the game is draw and there are no winners ////
+		// this 'if' checks if the game is draw and there are no winners
 
 		if (Counter == 9)
 		{
@@ -492,7 +492,7 @@ void GameBetween2Players()
 	}
 }
 
-//// this is the main function of the game ////
+// this is the main function of the game
 
 int main()
 {
